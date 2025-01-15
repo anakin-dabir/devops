@@ -1,0 +1,28 @@
+- whoami (current user)
+- pwd (present working directory)
+- ls (what's in dir)
+- cat (read file content)
+
+[<user>@<host> ~]$ (~: root dir, $: normal user shell)
+
+- sudo -i (switch to root user)
+
+[<root>@<host> /]# (/: root dir, #: root user shell)
+
+- exit (logout)
+- mkdir (create dir)
+- mv/cp -r(to copy dir) file1 dir1/ (move/copy file1 => dir1)
+- cd /home (change dir)
+- file (to check the type of file)
+- ln -s <complete-path> <shortcut> (creating shortcuts)
+
+
+** files ** 
+- ls -l
+    - : file (text, executable)
+    d : dir
+    c : character (device files /dev, for i/o) (Represent hardware devices that handle data as a stream of characters (e.g., keyboards, serial ports).
+    b : block file (disk file/ block disk file) (Represent devices that handle data in blocks, like hard drives or USB drives.)
+    l : link (shortcuts)
+    p : FIFO / Named Pipe (Special files for inter-process communication (IPC). Data written by one process can be read by another in a first-in, first-out manner.)
+    s : socket file (Used for IPC, particularly in networking, allowing processes to communicate over the network.)
