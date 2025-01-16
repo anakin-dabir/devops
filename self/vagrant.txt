@@ -7,6 +7,7 @@
 - vagrant box list (to check list of boxes)
 - vagrant provision (works on running vm) (Any provisioning configurations (e.g., shell scripts, Ansible, Puppet, Chef) defined in the Vagrantfile are run.)
 - vargrant reload --provision (restart vm and force provisioning)
+- vagrant plugin list (list of vagrant installed plugins)
 
 
 ** Create a folder **
@@ -88,6 +89,13 @@ Vagrant.configure("2") do |config|
    - export HOST_FOLDER=/path/to/host/folder 
         The export command sets a variable in the current shell session. If you want it to persist across sessions, you need to add it to your shell configuration file (like .bashrc, .zshrc, or .bash_profile)
    - vagrant up     
+   
+   ## vagrant-hostmanager plugin
+   config.hostmanager.enabled = true 
+   config.hostmanager.manage_host = true
+        - The Vagrant Hostmanager plugin is used to automatically update the hosts file (/etc/hosts on Linux/macOS or C:\Windows\System32\drivers\etc\hosts on Windows) on both the host machine and guest VMs.
+        - It allows you to access Vagrant VMs using friendly hostnames (e.g., myproject.local) instead of IP addresses.
+        - If you have multiple Vagrant machines in a cluster (e.g., web, database, cache servers), Hostmanager ensures each VM knows the others' hostnames and IPs.
   
 
 end
