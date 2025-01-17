@@ -1,0 +1,60 @@
+Vagrant.configure("2") do |config|
+  config.hostmanager.enabled = true 
+  config.hostmanager.manage_host = true
+  
+  ### Client VM  ####
+  config.vm.define "client" do |client|
+    client.vm.box = "eurolinux-vagrant/centos-stream-9"
+    client.vm.box_version = "9.0.48"
+    client.vm.hostname = "client"
+    client.vm.network "private_network", ip: "192.170.1.1"
+    client.vm.provider "virtualbox" do |vb|
+      vb.memory = "800"
+      vb.cpus = 1
+    end
+  end
+  
+  ### Server VM ###
+  config.vm.define "server" do |server|
+    server.vm.box = "ubuntu/jammy64"
+    server.vm.hostname = "server"
+    server.vm.network "private_network", ip: "192.170.1.2"
+    server.vm.provider "virtualbox" do |vb|
+       vb.memory = "800"
+       vb.cpus = 1
+    end
+  end
+   
+  ### Nginx VM ###
+  config.vm.define "nginx-lb" do |nginx|
+    nginx.vm.box = "ubuntu/jammy64"
+    nginx.vm.hostname = "nginx-lb"
+    nginx.vm.network "private_network", ip: "192.170.1.3"
+    nginx.vm.provider "virtualbox" do |vb|
+       vb.memory = "500"
+       vb.cpus = 1
+    end
+  end
+
+  ### DB VM ###
+  config.vm.define "db" do |db|
+    db.vm.box = "ubuntu/jammy64"
+    db.vm.hostname = "db"
+    db.vm.network "private_network", ip: "192.170.1.4"
+    db.vm.provider "virtualbox" do |vb|
+       vb.memory = "600"
+       vb.cpus = 1
+    end
+  end
+  ### Reddis VM ###
+  config.vm.define "reddis" do |reddis|
+    reddis.vm.box = "ubuntu/jammy64"
+    reddis.vm.hostname = "reddis-c"
+    reddis.vm.network "private_network", ip: "192.170.1.5"
+    reddis.vm.provider "virtualbox" do |vb|
+       vb.memory = "600"
+       vb.cpus = 1
+    end
+  end
+  
+end
