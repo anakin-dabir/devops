@@ -1,4 +1,5 @@
-** OSI MODEL ** 
+### ** OSI MODEL ** 
+
 1. Physical Layer (Layer 1)
 📌 Deals with the physical connection between devices, including cables, switches, and signals.
 
@@ -77,7 +78,7 @@
     Transmission: Data is sent over a physical medium.
     Receiver: Data moves up from the Physical Layer (Layer 1) to the Application Layer (Layer 7).
 
-** SUMMARY **
+### ** SUMMARY **
     - The OSI (Open Systems Interconnection) model is a conceptual framework used to understand and standardize network communication. It consists of seven layers, each with a specific function:
         Physical Layer – Transmits raw data bits over physical hardware like cables and radio waves.
         Data Link Layer – Ensures reliable data transfer between two directly connected devices (MAC & LLC).
@@ -88,14 +89,14 @@
         Application Layer – Provides network services to end users (e.g., HTTP, FTP, SMTP).
         
         
-** IP ADDRESSES ** 
+### ** IP ADDRESSES ** 
 Class A : 10.0.0.0 - 10.255.255.255
 Class B : 172.16.0.0 - 172.31.255.255
 Class C : 192.168.0.0 - 192.168.255.255
 Class D : 224.0.0.0 – 239.255.255.255 Multicast (One-to-Many Communication) - streaming
 
 
-** traceroute ** 
+### ** traceroute ** 
 2️⃣ Understanding the Output
 When you run tracert ubuntu.com, you'll see output like:
 Tracing route to ubuntu.com [185.125.190.36]
@@ -113,7 +114,7 @@ over a maximum of 30 hops:
 ✅ If a hop shows * * *, it means the request timed out—this could be a firewall or blocked ICMP requests.
 
 
-** netstat ** 
+### ** netstat ** 
 - netstat -antp
 Running netstat -an might show:
 

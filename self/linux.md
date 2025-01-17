@@ -20,7 +20,7 @@
 - ln -s <complete-path> <shortcut> (creating shortcuts)
 
 
-** files ** 
+### ** files ** 
 - ls -l
     - : file (text, executable)
     d : dir
@@ -31,7 +31,7 @@
     s : socket file (Used for IPC, particularly in networking, allowing processes to communicate over the network.)
     
     
-** Filters ** 
+### ** Filters ** 
 - grep <to-search> <filename> : Global Regular Expression Print (Refers to searching throughout the entire file or input)
 - find <filename> (Used to find the pathname of the file)
 - less / more <filename> (display file content page-wise/line-wise)
@@ -40,16 +40,16 @@
 - sed 's/<search-for>/replace-with/g'
 
 
-** Redirection **
+### ** Redirection **
 - </> (input / output to overwrite file or create new one)
 - >> (append)
 - &>> (append all output)
 - 2>> (append only error)
 
-** Piping ** 
+### ** Piping ** 
 - <first-command> | <second-command> (send the output of first as input to second command)
 
-** Users ** 
+### ** Users ** 
 - /etc/passwd (file)
     - <username>:<shadow file shortcut>:<userId>:<groupId>:<comment>:<home dir>:<shell>
     - root:x:0:0:root:/root:/bin/bash
@@ -61,7 +61,7 @@
         /root: home dir
         /bin/bash: shell
         
-** Groups ** 
+### ** Groups ** 
 - /etc/group (file)
     - <groupname>:<shortcut to password>:<groupId>:<group members>
     - vagrant:x:1000:vagrant
@@ -79,7 +79,7 @@
 - groupdel <groupname> (remove group)
 - lsof (lsof stands for List Open Files. It is a command-line utility in Unix/Linux systems used to list information about files that are currently opened by processes.)
 
-** File permissions **
+### ** File permissions **
 - ls -l
     r(read), w(write), x(executable)
     -rw-r--r--. 1 <username> <groupname> <time> file.txt
@@ -117,7 +117,7 @@
                         5: Group can read and execute.
                         4: Others can only read.
                         
-** SUDO **
+### ** SUDO **
 aws     ALL=(ALL:ALL)       NOPASSWD: ALL
 &aws    ALL=(ALL:ALL)       NOPASSWD: ALL
     1. aws, (%aws is a group name)
@@ -134,7 +134,7 @@ aws     ALL=(ALL:ALL)       NOPASSWD: ALL
          Doesn't required user password to proceed
                         
 
-** PACKAGE/SOFTWARE MANAGEMENT ** 
+### ** PACKAGE/SOFTWARE MANAGEMENT ** 
 - rpm -qa (list all rpm packages) -qi <packagename> (installed info with description) --last (recently installed)
 - rpm -qf /etc/passwd (find out this file path belongs to which package)
 - rpm -qc <packagename> (config file for a package)
@@ -170,10 +170,10 @@ aws     ALL=(ALL:ALL)       NOPASSWD: ALL
           - sudo rpm -ivh(install) -Uvh(upgrade) telnet.rpm
           - sudo dpkg -i telnet.deb
           
-** SERVICES **
+### ** SERVICES **
 - systemctl start/status/enable https/mongod
 
-** PROCESSES **
+### ** PROCESSES **
 - top (like task manager)
 - ps aux 
 - ps -ef (also shows parent process id)
@@ -200,8 +200,7 @@ aws     ALL=(ALL:ALL)       NOPASSWD: ALL
 - kill <PID> (stop process gracefully, child processes will be stopped)
 - kill -9 <PID> (forcefull stop process)
 
-
-**  ARCHIVING / COMPRESSING **
+### **  ARCHIVING / COMPRESSING **
 - tar : Tape Archive 
         (tar is a Unix/Linux command-line utility used for archiving files. It collects multiple files into a single archive file, often for the purpose of distribution or backup)
         

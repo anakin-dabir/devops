@@ -1,4 +1,4 @@
-Building the Internet from Scratch: A Step-by-Step Evolution from One Computer to the Global Internet
+### Building the Internet from Scratch: A Step-by-Step Evolution from One Computer to the Global Internet
 Imagine you are in the stone age of networking, and you only have one computer. You will gradually invent networking concepts step by step—starting with a single computer, then expanding to local, city-wide, national, and global networks.
 
 1️⃣ Single Computer: No Networking Yet
@@ -126,7 +126,7 @@ The website loads on the user’s browser.
 
 ----------------------------------------------------
 
-Running Out of IP Addresses? Let’s Solve It!
+### Running Out of IP Addresses? Let’s Solve It!
 You're absolutely right! The original design of IPv4 addresses (32-bit, ~4.3 billion addresses) is too limited for today’s global population and the massive number of devices. Let's dive into how we solve this problem step by step.
 
 1️⃣ The Problem: IPv4 Address Exhaustion
@@ -234,7 +234,7 @@ Satellite Networks: Systems like Starlink provide global internet coverage.
 
 --------------------------------------------------------------------------
 
-Step-by-Step Breakdown: Your Router → Your Computer → Virtual Machines (VMs)
+### Step-by-Step Breakdown: Your Router → Your Computer → Virtual Machines (VMs)
 Your router has a public IP from your ISP, and it assigns your computer a private IP. Now, you create Virtual Machines (VMs) inside your computer. How do they get IPs? Let’s break it down.
 
 1️⃣ Step 1: Your Router Assigns a Private IP to Your Computer
@@ -326,7 +326,7 @@ Host-Only Mode → VMs only communicate with each other and the host, no interne
 
 ----------------------------------------------------------------
 
-In Your "Stone Age" of Networking – Where Do Ports Fit?
+### In Your "Stone Age" of Networking – Where Do Ports Fit?
 You're in the early days of discovering networking—you’ve figured out IP addresses, subnetting, and how to assign private and public IPs. Now, you're encountering ports.
 
 What Were You Thinking When Inventing Ports?
@@ -409,12 +409,12 @@ Solution → Standardized port numbers for common services.
 
 ---------------------------------------------------------
 
-** PORT ** 
+### ** PORT ** 
 A port is a logical communication endpoint that allows a computer to distinguish between multiple services running on the same IP address. It is represented by a number (0-65535) and is used in combination with an IP address to route network traffic to the correct application. For example, HTTP uses port 80, and SSH uses port 22. 🚀
 
 -------------------------------------------------------------
 
-Inventing Load Balancing in the Stone Age: How Would You Build Nginx From Scratch?
+### Inventing Load Balancing in the Stone Age: How Would You Build Nginx From Scratch?
 You’re still in the Stone Age of Networking—you don’t know about Nginx, Apache, or modern load balancing tools yet.
 But you’ve discovered networking and now face a new problem:
 
@@ -442,8 +442,6 @@ Since you don’t have Nginx yet, you first manually assign requests to differen
 Instead of using one IP (192.168.1.10), you configure DNS to return different server IPs.
 ✅ Example DNS Setup
 
-Copy
-Edit
 website.com → 192.168.1.10
 website.com → 192.168.1.11
 When a user visits website.com, they are randomly assigned either 192.168.1.10 or 192.168.1.11.
@@ -466,10 +464,10 @@ Edit
 import socket
 import random
 
-# Backend servers
+** Backend servers
 backend_servers = ["192.168.1.10", "192.168.1.11"]
 
-# Create a basic TCP listener
+** Create a basic TCP listener
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.bind(("0.0.0.0", 80))
 server_socket.listen(5)
@@ -575,7 +573,7 @@ Better logging & error handling.
 
 ----------------------------------------------------------
 
-Vertical vs. Horizontal Scaling in Your Stone Age Journey: How You Invented Them
+### Vertical vs. Horizontal Scaling in Your Stone Age Journey: How You Invented Them
 You've now discovered networking, created load balancing, and started scaling services. But as traffic grows, you need a better strategy to scale. This is when you invent Vertical and Horizontal Scaling.
 
 1️⃣ The Problem You Encountered
@@ -648,7 +646,7 @@ If you need flexibility (you can add/remove machines as needed).
 
 ----------------------------------------------------------
 
-Internal Scaling: Can Private IPs Remain the Same While Scaling?
+### Internal Scaling: Can Private IPs Remain the Same While Scaling?
 ✅ Yes, you can scale internally while keeping the same private IP for a service.
 ✅ This is done using techniques like containers, auto-scaling groups, and reverse proxies.
 ✅ Instead of creating new private IPs, multiple processes or containers handle the scaling inside the same machine.
@@ -711,7 +709,7 @@ server {
 
 ----------------------------------------------------------
 
-Discovery of Domain & DNS in Your Stone Age Journey: How You Invented It
+### Discovery of Domain & DNS in Your Stone Age Journey: How You Invented It
 💡 You've built networking, private/public IPs, NAT, Load Balancing, and Scaling. Now, you face a new problem:
 
 ❌ IP addresses are hard to remember!
@@ -799,7 +797,7 @@ If your Load Balancer changes, update only one DNS record (mywebsite.com).
 
 ----------------------------------------------------------
 
-Where Did You Invent Subnetting and Masking in Your Stone Age Journey?
+### Where Did You Invent Subnetting and Masking in Your Stone Age Journey?
 🚀 You invented IP addresses, routers, gateways, DNS, and proxies—but now, as your network grows, you face a new problem!
 
 1️⃣ The Problem That Led You to Invent Subnetting & Masking
@@ -818,16 +816,11 @@ Different departments need isolation! You wanted to separate Finance, HR, IT, an
 2️⃣ How You Invented Subnetting (Breaking Big Networks into Smaller Ones)
 📌 Before Subnetting (One Big Network)
 
-csharp
-Copy
-Edit
 192.168.1.0 → 192.168.1.255 (All devices on the same network)
 Every computer could talk to every other computer.
 Security and efficiency were poor.
 📌 After Subnetting (Dividing into Small Networks)
 
-Copy
-Edit
 192.168.1.0/24 → IT Department
 192.168.2.0/24 → Finance
 192.168.3.0/24 → HR

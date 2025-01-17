@@ -1,4 +1,4 @@
-** Commands **
+### ** Commands **
 - vagrant init <box-name> (initiating vm)
 - vagrant box add <box> (adding vagrant box (vm os installation))
 - vagrant status (status of that virtual machine)
@@ -10,7 +10,7 @@
 - vagrant plugin list (list of vagrant installed plugins)
 
 
-** Create a folder **
+### ** Create a folder **
 - vagrant init <box-name> 
 - vagrant up (start the virtualmachine)
 - vagrant status (status of vm)
@@ -20,7 +20,7 @@
 - vagrant destroy (deleting vm)
 
 
-** Vagrantfile **
+## ** Vagrantfile **
 
 Vagrant.configure("2") do |config|
   

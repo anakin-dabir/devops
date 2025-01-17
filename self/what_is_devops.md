@@ -1,4 +1,4 @@
-What is DevOps?
+### What is DevOps?
 DevOps is a set of practices, tools, and a cultural philosophy aimed at improving collaboration and integration between software development (Dev) and IT operations (Ops). It focuses on automating and streamlining processes to deliver software applications and services at high velocity, improving the quality, reliability, and speed of software delivery.
 
 Core Practices of DevOps:
