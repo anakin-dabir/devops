@@ -12,17 +12,7 @@ Vagrant.configure("2") do |config|
       vb.memory = "800"
       vb.cpus = 1
     end
-  end
-  
-  ### Server VM ###
-  config.vm.define "server" do |server|
-    server.vm.box = "ubuntu/jammy64"
-    server.vm.hostname = "server"
-    server.vm.network "private_network", ip: "192.170.1.2"
-    server.vm.provider "virtualbox" do |vb|
-       vb.memory = "800"
-       vb.cpus = 1
-    end
+    client.vm.provision "shell", path: "./scripts/client.sh"
   end
    
   ### Nginx VM ###
@@ -35,6 +25,7 @@ Vagrant.configure("2") do |config|
        vb.memory = "500"
        vb.cpus = 1
     end
+    nginx.vm.provision "shell", path: "./scripts/nginx.sh"
   end
 
   ### DB VM ###
@@ -46,6 +37,7 @@ Vagrant.configure("2") do |config|
        vb.memory = "600"
        vb.cpus = 1
     end
+    db.vm.provision "shell", path: "./scripts/db.sh"
   end
   ### Reddis VM ###
   config.vm.define "reddis" do |reddis|
@@ -56,6 +48,19 @@ Vagrant.configure("2") do |config|
        vb.memory = "600"
        vb.cpus = 1
     end
+    reddis.vm.provision "shell", path: "./scripts/reddis.sh"
+  end
+  
+  ### Server VM ###
+  config.vm.define "server" do |server|
+    server.vm.box = "ubuntu/jammy64"
+    server.vm.hostname = "server"
+    server.vm.network "private_network", ip: "192.170.1.2"
+    server.vm.provider "virtualbox" do |vb|
+       vb.memory = "800"
+       vb.cpus = 1
+    end
+    server.vm.provision "shell", path: "./scripts/server.sh"
   end
   
 end

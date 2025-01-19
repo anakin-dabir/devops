@@ -123,3 +123,6 @@ The .pem approach is commonly used in cloud environments like AWS EC2. Here's ho
   Share the private key securely with the user.
   Users authenticate with the .pem file using SSH.
   For better security, combine .pem-based access with tools like centralized IAM, key rotation, and secure key sharing practices.
+
+- Accessing if portforwarded only:
+  ssh -p 2222 user@remote-server

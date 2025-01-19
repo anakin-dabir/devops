@@ -7,7 +7,7 @@
 - vagrant global-status --prune (filtering the virtual machines of vagrant vbox only)
 - vagrant box list (to check list of boxes)
 - vagrant provision (works on running vm) (Any provisioning configurations (e.g., shell scripts, Ansible, Puppet, Chef) defined in the Vagrantfile are run.)
-- vargrant reload --provision (restart vm and force provisioning)
+- vagrant reload --provision (restart vm and force provisioning)
 - vagrant plugin list (list of vagrant installed plugins)
 
 ### ** Create a folder **
