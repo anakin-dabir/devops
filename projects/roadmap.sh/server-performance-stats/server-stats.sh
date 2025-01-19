@@ -22,6 +22,6 @@ top -bn1 -o %CPU | grep PID -A 5
 echo
 
 # Top 5 processes by memory usage
-echo "Top 5 processes by CPU usage: "
+echo "Top 5 processes by Memory usage: "
 top -bn1 -o %MEM | grep PID -A 5
 echo
